@@ -644,7 +644,7 @@ export default function Page() {
                     download
                     className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition"
                   >
-                    View resume
+                    Resume
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                   <a
