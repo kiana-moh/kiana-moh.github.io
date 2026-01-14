@@ -233,14 +233,14 @@ function ProjectCarousel({ projects }: { projects: Project[] }) {
   const active = projects[activeIndex] ?? projects[0];
 
   return (
-    <section id="projects" className="h-screen snap-start snap-always scroll-mt-20 py-16">
+    <section id="projects" className="min-h-screen snap-start pb-16 pt-24">
       <div className="mx-auto max-w-6xl px-5">
         <div className="flex flex-col items-center gap-6 text-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/50">
               Projects
             </p>
-            <h2 className="mt-3 text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+            <h2 className="mt-3 text-6xl font-semibold tracking-tight text-white">
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: active.theme.text }}
@@ -317,7 +317,7 @@ function ProjectCarousel({ projects }: { projects: Project[] }) {
                           {p.category}
                         </span>
                       ) : null}
-                      <h3 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                      <h3 className="mt-4 text-5xl font-semibold tracking-tight text-white">
                         <span
                           className="bg-clip-text text-transparent"
                           style={{ backgroundImage: p.theme.text }}
@@ -435,20 +435,20 @@ function SkillsSection() {
   );
 
   return (
-    <section id="skills" className="h-screen snap-start snap-always scroll-mt-20 py-16">
+    <section id="skills" className="min-h-screen snap-start pb-16 pt-24">
       <div className="mx-auto max-w-6xl px-5">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/50">
             Skills
           </p>
-          <h2 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="mt-3 text-5xl font-semibold tracking-tight">
             <span className="bg-clip-text text-transparent [background-image:linear-gradient(90deg,#f8fafc,#a5b4fc,#38bdf8)]">
               Technical Skills
             </span>
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 grid-cols-3">
           {groups.map((g, idx) => (
             <div
               key={g.title}
@@ -516,13 +516,13 @@ function ExperienceSection() {
   );
 
   return (
-    <section id="experience" className="h-screen snap-start snap-always scroll-mt-20 py-16">
+    <section id="experience" className="min-h-screen snap-start pb-16 pt-24">
       <div className="mx-auto max-w-6xl px-5">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/50">
             Experience
           </p>
-          <h2 className="mt-4 text-5xl font-semibold tracking-tight sm:text-6xl">
+          <h2 className="mt-4 text-6xl font-semibold tracking-tight">
             <span className="bg-clip-text text-transparent [background-image:linear-gradient(90deg,#f8fafc,#a5b4fc,#38bdf8)]">
               Experience
             </span>
@@ -530,20 +530,20 @@ function ExperienceSection() {
         </div>
 
         <div className="relative mt-14">
-          <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-white/10 sm:left-8 sm:translate-x-0" />
-          <div className="space-y-12 sm:space-y-16">
+          <div className="absolute left-8 top-0 h-full w-px translate-x-0 bg-white/10" />
+          <div className="space-y-16">
             {roles.map((role, idx) => (
               <div key={`${role.title}-${role.period}`} className="relative">
-                <div className="absolute left-1/2 top-6 -translate-x-1/2 sm:left-8 sm:translate-x-0">
+                <div className="absolute left-8 top-6 translate-x-0">
                   <div className={`h-3.5 w-3.5 rounded-full bg-gradient-to-r ${role.accent}`} />
                 </div>
-                <div className="mx-auto max-w-4xl px-6 py-4 text-center sm:ml-20 sm:text-left">
+                <div className="mx-auto max-w-4xl px-6 py-4 ml-20 text-left">
                   <div className="flex flex-wrap items-center justify-between gap-4">
-                    <p className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                    <p className="text-3xl font-semibold tracking-tight text-white">
                       {role.title}
                     </p>
                   </div>
-                  <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-white/60 sm:text-base">
+                  <div className="mt-2 flex flex-wrap items-center gap-3 text-base text-white/60">
                     <span>{role.org}</span>
                     <span className="h-1 w-1 rounded-full bg-white/30" />
                     <span className="text-sm font-semibold text-white/45">{role.period}</span>
@@ -612,7 +612,7 @@ export default function Page() {
       </header>
 
       <div>
-        <section id="top" className="h-screen snap-start snap-always scroll-mt-20 py-16">
+        <section id="top" className="min-h-screen snap-start pb-16 pt-24">
           <div className="mx-auto max-w-6xl px-5">
             <div className="relative flex min-h-[80vh] items-center justify-center text-center">
               <div className="absolute -top-24 left-1/2 h-72 w-[620px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.18),transparent_70%)] blur-3xl" />
@@ -626,7 +626,7 @@ export default function Page() {
                   <span>2025</span>
                 </div>
 
-                <h1 className="mt-6 text-5xl font-semibold tracking-tight sm:text-7xl">
+                <h1 className="mt-6 text-7xl font-semibold tracking-tight">
                   <span className="bg-clip-text text-transparent [background-image:linear-gradient(90deg,#f8fafc,#cbd5f5,#7dd3fc)]">
                     {PROFILE.name}
                   </span>
@@ -653,7 +653,7 @@ export default function Page() {
                   >
                     Contact us
                   </a>
-                  <span className="hidden sm:inline text-xs text-white/40">
+                  <span className="inline text-xs text-white/40">
                     Scroll for projects
                   </span>
                 </div>
@@ -666,7 +666,6 @@ export default function Page() {
         <SkillsSection />
         <ExperienceSection />
       </div>
-
     </main>
   );
 }
