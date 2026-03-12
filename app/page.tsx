@@ -38,7 +38,8 @@ const PROJECTS: Project[] = [
     tagline: "Workout tracking with clean data models.",
     description:
       "FastAPI + PostgreSQL app with auth and structured workout data.",
-    links: { github: "https://github.com/kiana-moh" },
+    demoSrc: "https://www.youtube.com/embed/TPfUCr9Fqa4",
+    links: { github: "https://github.com/kiana-moh/Momentum" },
   },
   {
     title: "Market Return Analyzer",
@@ -250,13 +251,13 @@ export default function Page() {
                     {project.demoSrc ? (
                       <div className="space-y-2">
                         <p className="text-sm font-medium text-white/75">
-                          UWAY DEMO
+                          {project.title.toUpperCase()} DEMO
                         </p>
                         <div className="aspect-video w-full border-2 border-white/60">
                           <iframe
                             className="h-full w-full"
                             src={project.demoSrc}
-                            title="UWay demo"
+                            title={`${project.title} demo`}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                           />
