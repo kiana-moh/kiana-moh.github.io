@@ -204,7 +204,7 @@ export default function Page() {
           <SectionTitle
             kicker="Selected Work"
             title="Projects"
-            subtitle="Short, straightforward, and results-first."
+            subtitle=""
           />
           <div className="mt-8 space-y-5">
             {PROJECTS.map((project, index) => (
@@ -285,7 +285,7 @@ export default function Page() {
                 href={item.href}
                 target={item.href.startsWith("mailto:") ? undefined : "_blank"}
                 rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
-                className="group relative flex items-center justify-center gap-3 border border-white/25 px-6 py-3 text-sm text-white/80 hover:text-white transition"
+                className="group relative flex items-center justify-center gap-3 border border-white/25 px-8 py-3 text-sm text-white/80 hover:text-white transition"
               >
                 <span className="text-white/70">
                   {item.label === "Email" ? (
@@ -297,10 +297,12 @@ export default function Page() {
                   )}
                 </span>
                 <span className="text-white/80">{item.value}</span>
-                <span className="pointer-events-none absolute left-0 top-0 h-3 w-3 border-l-2 border-t-2 border-pink-400 opacity-0 transition group-hover:opacity-100" />
-                <span className="pointer-events-none absolute right-0 top-0 h-3 w-3 border-r-2 border-t-2 border-pink-400 opacity-0 transition group-hover:opacity-100" />
-                <span className="pointer-events-none absolute left-0 bottom-0 h-3 w-3 border-l-2 border-b-2 border-pink-400 opacity-0 transition group-hover:opacity-100" />
-                <span className="pointer-events-none absolute right-0 bottom-0 h-3 w-3 border-r-2 border-b-2 border-pink-400 opacity-0 transition group-hover:opacity-100" />
+                <span className="pointer-events-none absolute left-0 top-0 h-full w-[3px] -translate-x-1 bg-pink-400/90 opacity-0 group-hover:opacity-100" />
+                <span className="pointer-events-none absolute left-0 top-0 h-[3px] w-5 -translate-x-1 bg-pink-400/90 opacity-0 group-hover:opacity-100" />
+                <span className="pointer-events-none absolute left-0 bottom-0 h-[3px] w-5 -translate-x-1 bg-pink-400/90 opacity-0 group-hover:opacity-100" />
+                <span className="pointer-events-none absolute right-0 top-0 h-full w-[3px] translate-x-1 bg-pink-400/90 opacity-0 group-hover:opacity-100" />
+                <span className="pointer-events-none absolute right-0 top-0 h-[3px] w-5 translate-x-1 bg-pink-400/90 opacity-0 group-hover:opacity-100" />
+                <span className="pointer-events-none absolute right-0 bottom-0 h-[3px] w-5 translate-x-1 bg-pink-400/90 opacity-0 group-hover:opacity-100" />
               </a>
             ))}
           </div>
